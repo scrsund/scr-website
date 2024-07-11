@@ -1,11 +1,11 @@
 <template>
-  <body>
+  <main>
     <div class="container">
       <div class="box">
         <hover-card>
           <hover-card-trigger>
             <home-card>
-              <router-link link to="/about">Hi, I'm Sarah.</router-link>
+              <router-link to="/about">Hi, I'm Sarah.</router-link>
             </home-card>
           </hover-card-trigger>
           <hover-card-content>
@@ -27,7 +27,7 @@
       <h1 class="title">Aspiring Web Developer</h1>
       <h2 class="subtitle">Vue.js · postgreSQL · Python</h2>
     </div>
-  </body>
+  </main>
 </template>
 
 <script>
@@ -50,18 +50,9 @@ export default {
     ...mapState(["iconList"]),
   },
   methods: {
-    animateLink(event) {
-      event.preventDefault();
-      const link = event.target;
-      link.classList.add("clicked");
-      setTimeout(() => {
-        this.$router.push("/home");
-      }, 500);
-    },
     getIconClass(index) {
       return `icon-position-${index}`;
     },
-    getIcon() {},
   },
 };
 </script>
@@ -149,23 +140,23 @@ i {
 }
 
 .box:hover .icon-position-1 {
-  animation: slideOut1 2.5s ease forwards;
+  animation: slideOut1 2s ease forwards;
 }
 
 .box:hover .icon-position-2 {
-  animation: slideOut2 2.5s ease forwards;
+  animation: slideOut2 2s ease forwards;
 }
 
 .box:hover .icon-position-3 {
-  animation: slideOut3 2.5s ease forwards;
+  animation: slideOut3 2s ease forwards;
 }
 
 .box:hover .icon-position-4 {
-  animation: slideOut4 2.5s ease forwards;
+  animation: slideOut4 2s ease forwards;
 }
 
 .box:hover .icon-position-5 {
-  animation: slideOut5 2.5s ease forwards;
+  animation: slideOut5 2s ease forwards;
 }
 
 @keyframes slideInFromRight {
@@ -179,7 +170,7 @@ i {
   }
 }
 
-body {
+main {
   background: var(--clr-1);
   min-height: 63vh;
   display: flex;
