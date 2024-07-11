@@ -1,4 +1,13 @@
-import { createApp } from 'vue'
-import App from './App.vue'
+import { createApp } from "vue";
+import "@fortawesome/fontawesome-free/css/all.css";
 
-createApp(App).mount('#app')
+import App from "./App.vue";
+import router from "./router.js";
+import store from "./index.js";
+
+const app = createApp(App);
+
+app.use(router);
+app.use(store);
+
+app.mount("#app");

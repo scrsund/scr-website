@@ -8,17 +8,30 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.5.2",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
     "core-js": "^3.8.3",
-    "vue": "^3.2.13"
+    "lucide-vue-next": "^0.400.0",
+    "radix-vue": "^1.8.5",
+    "shadcn-vue": "^0.10.5",
+    "tailwind-merge": "^2.3.0",
+    "tailwindcss-animate": "^1.0.7",
+    "vue": "^3.2.13",
+    "vue-router": "^4.3.3",
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.16",
-    "@babel/eslint-parser": "^7.12.16",
+    "@babel/eslint-parser": "^7.24.7",
     "@vue/cli-plugin-babel": "~5.0.0",
     "@vue/cli-plugin-eslint": "~5.0.0",
     "@vue/cli-service": "~5.0.0",
-    "eslint": "^7.32.0",
-    "eslint-plugin-vue": "^8.0.3"
+    "@vue/eslint-config-prettier": "^9.0.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-vue": "^9.27.0",
+    "file-loader": "^6.2.0",
+    "url-loader": "^4.1.1"
   },
   "eslintConfig": {
     "root": true,
