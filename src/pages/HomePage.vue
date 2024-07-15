@@ -22,10 +22,10 @@
           </hover-card-content>
         </hover-card>
       </div>
-    </div>
-    <div>
-      <h1 class="title">Aspiring Web Developer</h1>
-      <h2 class="subtitle">Vue.js · postgreSQL · Python</h2>
+      <div class="text-container">
+        <h1 class="title">Aspiring Web Developer</h1>
+        <h2 class="subtitle">Vue.js · postgreSQL · Python</h2>
+      </div>
     </div>
   </main>
 </template>
@@ -171,79 +171,98 @@ i {
 }
 
 main {
-  background: var(--clr-1);
-  min-height: 63vh;
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  padding: 50px;
-  position: relative;
+  min-height: 60vh;
+  padding: 2rem;
 }
 
 .container {
   width: 100%;
-  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
   z-index: 0;
 }
 
-.box {
-  margin-top: 2rem;
-  right: 56%;
-  position: absolute;
-  cursor: pointer;
-}
-
-.box-about-pg {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
 .box a {
   text-decoration: none;
+  padding: 0.5rem;
   font-size: 32px;
   color: whitesmoke;
   font-weight: 700;
   font-family: "Raleway", sans-serif;
 }
 
+.box {
+  position: relative;
+  cursor: pointer;
+  margin: 6rem;
+}
+
+.text-container {
+  margin-top: 4rem;
+  width: 25rem;
+  margin-left: 3rem;
+}
+
 .title {
-  position: absolute;
-  top: 41%;
-  right: 20%;
+  position: relative;
   font-size: 2rem;
   color: whitesmoke;
+  text-align: left;
 }
 
 .subtitle {
-  position: absolute;
-  top: 49%;
-  right: 15%;
   font-size: 1.5rem;
   background: #3c3b3f;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
+  position: relative;
+  text-align: right;
 }
 
-.subtitle:nth-child(2) {
-  bottom: 10%;
+@media (max-width: 1000px) {
+  .container {
+    display: grid;
+  }
+
+  .box {
+    margin-bottom: 0;
+  }
+
+  .text-container {
+    margin-top: 1rem;
+    text-align: center;
+  }
+
+  .subtitle {
+    text-align: center;
+  }
 }
 
-.subtitle:nth-child(3) {
-  bottom: 20%;
-}
+@media (max-width: 480px) {
+  .container {
+    display: grid;
+  }
 
-.subtitle:nth-child(4) {
-  bottom: 4%;
-}
+  .box {
+    margin-bottom: 0;
+  }
 
-h2 {
-  background: #3c3b3f;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
+  .text-container {
+    margin-top: 1rem;
+    text-align: center;
+    margin: 0;
+  }
+
+  .title {
+    text-align: center;
+  }
+
+  .subtitle {
+    text-align: center;
+  }
 }
 
 /*
@@ -303,6 +322,26 @@ h2 {
   animation: slideInFromRight 1.3s ease;
   animation-fill-mode: forwards;
   animation-delay: 0.7s;
+}
+
+original -
+.title {
+  position: absolute;
+  top: 41%;
+  right: 20%;
+  font-size: 2rem;
+  color: whitesmoke;
+}
+
+.subtitle {
+  position: absolute;
+  top: 49%;
+  right: 15%;
+  font-size: 1.5rem;
+  background: #3c3b3f;
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
 }
   */
 </style>

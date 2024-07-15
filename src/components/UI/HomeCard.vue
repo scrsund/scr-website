@@ -17,8 +17,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 40vh;
-  aspect-ratio: 1 / 1;
+  height: 18rem;
+  width: 18rem;
   background: var(--clr-2);
   border-radius: 4.5rem;
   position: relative;
