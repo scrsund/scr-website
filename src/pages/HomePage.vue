@@ -54,23 +54,12 @@ export default {
   methods: {
     getIconClass(index) {
       return `icon-position-${index}`;
-    },`
+    },
   },
 };
 </script>
 
 <style scoped>
-@keyframes slideIn1 {
-  0% {
-    opacity: 1;
-    transform: translate(150%, 0%);
-  }
-  100% {
-    opacity: 0;
-    transform: translate(400%, -700%);
-  }
-}
-
 @keyframes slideOut1 {
   0% {
     opacity: 0;
@@ -82,6 +71,17 @@ export default {
   }
 }
 
+@keyframes slideIn1 {
+  0% {
+    opacity: 1;
+    transform: translate(150%, 0%);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(400%, -700%);
+  }
+}
+
 @keyframes slideOut2 {
   0% {
     opacity: 0;
@@ -90,6 +90,17 @@ export default {
   100% {
     opacity: 1;
     transform: translate(-200%, -500%);
+  }
+}
+
+@keyframes slideIn2 {
+  0% {
+    opacity: 1;
+    transform: translate(-200%, -500%);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(400%, -700%);
   }
 }
 
@@ -104,15 +115,36 @@ export default {
   }
 }
 
+@keyframes slideIn3 {
+  0% {
+    opacity: 1;
+    transform: translate(-170%, -1130%);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(400%, -700%);
+  }
+}
+
 @keyframes slideOut4 {
   0% {
     opacity: 0;
     transform: translate(400%, -700%);
   }
-
   100% {
     opacity: 1;
     transform: translate(400%, -1400%);
+  }
+}
+
+@keyframes slideIn4 {
+  0% {
+    opacity: 1;
+    transform: translate(400%, -1400%);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(400%, -700%);
   }
 }
 
@@ -127,6 +159,17 @@ export default {
   }
 }
 
+@keyframes slideIn5 {
+  0% {
+    opacity: 1;
+    transform: translate(870%, -1200%);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(400%, -700%);
+  }
+}
+
 @keyframes slideOut6 {
   0% {
     opacity: 0;
@@ -135,6 +178,17 @@ export default {
   100% {
     opacity: 1;
     transform: translate(950%, -630%);
+  }
+}
+
+@keyframes slideIn6 {
+  0% {
+    opacity: 1;
+    transform: translate(950%, -630%);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(400%, -700%);
   }
 }
 
@@ -149,72 +203,16 @@ export default {
   }
 }
 
-/*
-circumference = 1300%
-center = 450%, -700%
-
-radius = 20.42 = 2042%
-
-3606, -4180
-3583, -4187
-
-@keyframes slideOut1 {
+@keyframes slideIn7 {
   0% {
-    opacity: 0;
-    transform: translate(450%, -700%);
+    opacity: 1;
+    transform: translate(850%, -34%);
   }
   100% {
-    opacity: 1;
-    transform: translate(233.68%, -34.26%);
-  }
-}
-
-@keyframes slideOut2 {
-  0% {
     opacity: 0;
-    transform: translate(450%, -700%);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(-200%, -500%);
+    transform: translate(400%, -700%);
   }
 }
-
-@keyframes slideOut3 {
-  0% {
-    opacity: 0;
-    transform: translate(450%, -700%);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(233.68%, -1365.73%);
-  }
-}
-
-@keyframes slideOut4 {
-  0% {
-    opacity: 0;
-    transform: translate(450%, -700%);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translate(900%, -1111.44%);
-  }
-}
-
-@keyframes slideOut5 {
-  0% {
-    opacity: 0;
-    transform: translate(450%, -700%);
-  }
-  100% {
-    opacity: 1;
-    transform: translate(1016.31%, -288.55%);
-  }
-}
-
-*/
 
 i {
   position: absolute;
@@ -250,6 +248,34 @@ i {
 
 .box:hover .icon-position-7 {
   animation: slideOut7 2s ease forwards;
+}
+
+.box .icon-position-1 {
+  animation: slideIn1 1s ease forwards;
+}
+
+.box .icon-position-2 {
+  animation: slideIn2 1s ease forwards;
+}
+
+.box .icon-position-3 {
+  animation: slideIn3 1s ease forwards;
+}
+
+.box .icon-position-4 {
+  animation: slideIn4 1s ease forwards;
+}
+
+.box .icon-position-5 {
+  animation: slideIn5 1s ease forwards;
+}
+
+.box .icon-position-6 {
+  animation: slideIn6 1s ease forwards;
+}
+
+.box .icon-position-7 {
+  animation: slideIn7 1s ease forwards;
 }
 
 main {
@@ -380,65 +406,6 @@ findPoints() {
       this.points = points;
       console.log(this.points);
     },
-
-
-@keyframes slideInFromLeft {
-  0% {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideInFromRight {
-  0% {
-    opacity: 0;
-    transform: translateX(100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-.link {
-  text-decoration: none;
-  color: white;
-  font-size: 1.5rem;
-  transition: transform 0.5s ease, opacity 0.5s ease;
-}
-
-.link.clicked {
-  transform: scale(0.1);
-  opacity: 0;
-}
-
-.title {
-  position: absolute;
-  top: 41%;
-  right: 20%;
-  font-size: 2rem;
-  color: whitesmoke;
-  animation: slideInFromLeft 1.3s ease;
-}
-
-.subtitle {
-  opacity: 0;
-  position: absolute;
-  top: 49%;
-  right: 15%;
-  font-size: 1.5rem;
-  background: #3c3b3f;
-  background-clip: text;
-  -webkit-background-clip: text;
-  color: transparent;
-  animation: slideInFromRight 1.3s ease;
-  animation-fill-mode: forwards;
-  animation-delay: 0.7s;
-}
 
 original -
 .title {
