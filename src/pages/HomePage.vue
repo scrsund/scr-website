@@ -15,9 +15,11 @@
                 class="fa-solid fa-graduation-cap"
                 :class="getIconClass(2)"
               ></i>
-              <i class="fa-solid fa-people-group" :class="getIconClass(3)"></i>
-              <i class="fa-solid fa-code" :class="getIconClass(4)"></i>
-              <i class="fa-solid fa-trophy" :class="getIconClass(5)"></i>
+              <i class="fa-solid fa-dumbbell" :class="getIconClass(3)"></i>
+              <i class="fa-solid fa-trophy" :class="getIconClass(4)"></i>
+              <i class="fa-solid fa-people-group" :class="getIconClass(5)"></i>
+              <i class="fa-solid fa-code" :class="getIconClass(6)"></i>
+              <i class="fa-solid fa-drum" :class="getIconClass(7)"></i>
             </div>
           </hover-card-content>
         </hover-card>
@@ -52,7 +54,7 @@ export default {
   methods: {
     getIconClass(index) {
       return `icon-position-${index}`;
-    },
+    },`
   },
 };
 </script>
@@ -61,75 +63,158 @@ export default {
 @keyframes slideIn1 {
   0% {
     opacity: 1;
-    transform: translate(-25%, 100%);
+    transform: translate(150%, 0%);
   }
   100% {
     opacity: 0;
-    transform: translate(150%, -150%);
+    transform: translate(400%, -700%);
   }
 }
 
 @keyframes slideOut1 {
   0% {
     opacity: 0;
-    transform: translate(320%, -485%);
+    transform: translate(400%, -700%);
   }
   100% {
     opacity: 1;
-    transform: translate(150%, 150%);
+    transform: translate(150%, 0%);
   }
 }
 
 @keyframes slideOut2 {
   0% {
     opacity: 0;
-    transform: translate(320%, -485%);
+    transform: translate(400%, -700%);
   }
   100% {
     opacity: 1;
-    transform: translate(-220%, -350%);
+    transform: translate(-200%, -500%);
   }
 }
 
 @keyframes slideOut3 {
   0% {
     opacity: 0;
-    transform: translate(320%, -485%);
+    transform: translate(400%, -700%);
   }
   100% {
     opacity: 1;
-    transform: translate(-100%, -1000%);
+    transform: translate(-170%, -1130%);
   }
 }
 
 @keyframes slideOut4 {
   0% {
     opacity: 0;
-    transform: translate(320%, -485%);
+    transform: translate(400%, -700%);
   }
 
   100% {
     opacity: 1;
-    transform: translate(600%, -1000%);
+    transform: translate(400%, -1400%);
   }
 }
 
 @keyframes slideOut5 {
   0% {
     opacity: 0;
-    transform: translate(320%, -485%);
+    transform: translate(400%, -700%);
   }
   100% {
     opacity: 1;
-    transform: translate(850%, -200%);
+    transform: translate(870%, -1200%);
   }
 }
 
-.icon-container {
-  position: relative;
-  width: 100%;
-  height: 100%;
+@keyframes slideOut6 {
+  0% {
+    opacity: 0;
+    transform: translate(400%, -700%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(950%, -630%);
+  }
 }
+
+@keyframes slideOut7 {
+  0% {
+    opacity: 0;
+    transform: translate(400%, -700%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(850%, -34%);
+  }
+}
+
+/*
+circumference = 1300%
+center = 450%, -700%
+
+radius = 20.42 = 2042%
+
+3606, -4180
+3583, -4187
+
+@keyframes slideOut1 {
+  0% {
+    opacity: 0;
+    transform: translate(450%, -700%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(233.68%, -34.26%);
+  }
+}
+
+@keyframes slideOut2 {
+  0% {
+    opacity: 0;
+    transform: translate(450%, -700%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-200%, -500%);
+  }
+}
+
+@keyframes slideOut3 {
+  0% {
+    opacity: 0;
+    transform: translate(450%, -700%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(233.68%, -1365.73%);
+  }
+}
+
+@keyframes slideOut4 {
+  0% {
+    opacity: 0;
+    transform: translate(450%, -700%);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translate(900%, -1111.44%);
+  }
+}
+
+@keyframes slideOut5 {
+  0% {
+    opacity: 0;
+    transform: translate(450%, -700%);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(1016.31%, -288.55%);
+  }
+}
+
+*/
 
 i {
   position: absolute;
@@ -159,15 +244,12 @@ i {
   animation: slideOut5 2s ease forwards;
 }
 
-@keyframes slideInFromRight {
-  0% {
-    opacity: 0;
-    transform: translateX(100%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.box:hover .icon-position-6 {
+  animation: slideOut6 2s ease forwards;
+}
+
+.box:hover .icon-position-7 {
+  animation: slideOut7 2s ease forwards;
 }
 
 main {
@@ -177,6 +259,7 @@ main {
 
 .container {
   width: 100%;
+  height: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -266,6 +349,39 @@ main {
 }
 
 /*
+CIRCLE CALCULATION
+
+center (450%, -700%)
+
+findPoints() {
+      const C_x = 450; // Center x-coordinate in percentage
+      const C_y = -700; // Center y-coordinate in percentage
+      const Point1 = { x: -250, y: -700 }; // Given point1
+      const n = 5; // Total number of points
+
+      // Calculate the radius of the circle
+      const r = Math.abs(C_x - Point1.x); // Since Point1 and Point2 lie on the same horizontal line
+
+      // Calculate the angles for the given points
+      const angle1 = Math.atan2(Point1.y - C_y, Point1.x - C_x);
+
+      // Calculate the angular step between each point
+      const step = (2 * Math.PI) / n;
+
+      const points = [];
+
+      for (let i = 0; i < n; i++) {
+        const angle = angle1 + i * step;
+        const x = C_x + r * Math.cos(angle);
+        const y = C_y + r * Math.sin(angle);
+        points.push({ x, y });
+      }
+
+      this.points = points;
+      console.log(this.points);
+    },
+
+
 @keyframes slideInFromLeft {
   0% {
     opacity: 0;
