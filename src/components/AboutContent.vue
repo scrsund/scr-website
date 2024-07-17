@@ -141,6 +141,7 @@ export default {
   flex-direction: column;
   align-items: center;
   transition: transform 0.5s;
+  cursor: pointer;
 }
 
 .grid-item i {
