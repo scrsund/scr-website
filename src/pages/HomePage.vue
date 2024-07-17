@@ -10,7 +10,10 @@
           </hover-card-trigger>
           <hover-card-content>
             <div class="icon-container">
-              <i class="fa-solid fa-music" :class="getIconClass(1)"></i>
+              <i
+                class="fa-solid fa-music"
+                :class="['hidden-load', getIconClass(1)]"
+              ></i>
               <i
                 class="fa-solid fa-graduation-cap"
                 :class="getIconClass(2)"
@@ -53,7 +56,7 @@ export default {
   },
   methods: {
     getIconClass(index) {
-      return `icon-position-${index}`;
+      return `icon-position-${index} ${this.iconState}`;
     },
   },
 };
@@ -63,155 +66,181 @@ export default {
 @keyframes slideOut1 {
   0% {
     opacity: 0;
-    transform: translate(400%, -700%);
+    transform: translate(-630%, -50%);
   }
   100% {
     opacity: 1;
-    transform: translate(150%, 0%);
+    transform: translate(-1000%, 630%);
   }
 }
 
 @keyframes slideIn1 {
   0% {
     opacity: 1;
-    transform: translate(150%, 0%);
+    transform: translate(-1000%, 630%);
   }
   100% {
     opacity: 0;
-    transform: translate(400%, -700%);
+    transform: translate(-630%, -50%);
   }
 }
 
 @keyframes slideOut2 {
   0% {
     opacity: 0;
-    transform: translate(400%, -700%);
+    transform: translate(-630%, -50%);
   }
   100% {
     opacity: 1;
-    transform: translate(-200%, -500%);
+    transform: translate(-1100%, 100%);
   }
 }
 
 @keyframes slideIn2 {
   0% {
     opacity: 1;
-    transform: translate(-200%, -500%);
+    transform: translate(-1100%, 100%);
   }
   100% {
     opacity: 0;
-    transform: translate(400%, -700%);
+    transform: translate(-630%, -50%);
   }
 }
 
 @keyframes slideOut3 {
   0% {
     opacity: 0;
-    transform: translate(400%, -700%);
+    transform: translate(-630%, -50%);
   }
   100% {
     opacity: 1;
-    transform: translate(-170%, -1130%);
+    transform: translate(-1080%, -500%);
   }
 }
 
 @keyframes slideIn3 {
   0% {
     opacity: 1;
-    transform: translate(-170%, -1130%);
+    transform: translate(-1080%, -500%);
   }
   100% {
     opacity: 0;
-    transform: translate(400%, -700%);
+    transform: translate(-630%, -50%);
   }
 }
 
 @keyframes slideOut4 {
   0% {
     opacity: 0;
-    transform: translate(400%, -700%);
+    transform: translate(-630%, -50%);
   }
   100% {
     opacity: 1;
-    transform: translate(400%, -1400%);
+    transform: translate(-600%, -750%);
   }
 }
 
 @keyframes slideIn4 {
   0% {
     opacity: 1;
-    transform: translate(400%, -1400%);
+    transform: translate(-600%, -750%);
   }
   100% {
     opacity: 0;
-    transform: translate(400%, -700%);
+    transform: translate(-630%, -50%);
   }
 }
 
 @keyframes slideOut5 {
   0% {
     opacity: 0;
-    transform: translate(400%, -700%);
+    transform: translate(-500%, -50%);
   }
   100% {
     opacity: 1;
-    transform: translate(870%, -1200%);
+    transform: translate(-0%, -620%);
   }
 }
 
 @keyframes slideIn5 {
   0% {
     opacity: 1;
-    transform: translate(870%, -1200%);
+    transform: translate(-0%, -620%);
   }
   100% {
     opacity: 0;
-    transform: translate(400%, -700%);
+    transform: translate(-500%, -50%);
   }
 }
 
 @keyframes slideOut6 {
   0% {
     opacity: 0;
-    transform: translate(400%, -700%);
+    transform: translate(-500%, -50%);
   }
   100% {
     opacity: 1;
-    transform: translate(950%, -630%);
+    transform: translate(80%, -30%);
   }
 }
 
 @keyframes slideIn6 {
   0% {
     opacity: 1;
-    transform: translate(950%, -630%);
+    transform: translate(80%, -30%);
   }
   100% {
     opacity: 0;
-    transform: translate(400%, -700%);
+    transform: translate(-500%, -50%);
   }
 }
 
 @keyframes slideOut7 {
   0% {
     opacity: 0;
-    transform: translate(400%, -700%);
+    transform: translate(-630%, -50%);
   }
   100% {
     opacity: 1;
-    transform: translate(850%, -34%);
+    transform: translate(-200%, 600%);
   }
 }
 
 @keyframes slideIn7 {
   0% {
     opacity: 1;
-    transform: translate(850%, -34%);
+    transform: translate(-200%, 580%);
   }
   100% {
     opacity: 0;
-    transform: translate(400%, -700%);
+    transform: translate(-630%, -50%);
   }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.icon-container {
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.box:hover .icon-container {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.box:not(:hover) .icon-container {
+  animation: fadeOut 1s forwards;
 }
 
 i {
@@ -219,35 +248,35 @@ i {
   font-size: 28px;
   color: rgba(245, 245, 245, 0.618);
   opacity: 0;
-  transition: all 0.5s ease;
+  transition: all 0.4s ease;
 }
 
 .box:hover .icon-position-1 {
-  animation: slideOut1 2s ease forwards;
+  animation: slideOut1 1.8s ease forwards;
 }
 
 .box:hover .icon-position-2 {
-  animation: slideOut2 2s ease forwards;
+  animation: slideOut2 1.8s ease forwards;
 }
 
 .box:hover .icon-position-3 {
-  animation: slideOut3 2s ease forwards;
+  animation: slideOut3 1.8s ease forwards;
 }
 
 .box:hover .icon-position-4 {
-  animation: slideOut4 2s ease forwards;
+  animation: slideOut4 1.8s ease forwards;
 }
 
 .box:hover .icon-position-5 {
-  animation: slideOut5 2s ease forwards;
+  animation: slideOut5 1.8s ease forwards;
 }
 
 .box:hover .icon-position-6 {
-  animation: slideOut6 2s ease forwards;
+  animation: slideOut6 1.8s ease forwards;
 }
 
 .box:hover .icon-position-7 {
-  animation: slideOut7 2s ease forwards;
+  animation: slideOut7 1.8s ease forwards;
 }
 
 .box .icon-position-1 {
@@ -293,6 +322,15 @@ main {
   z-index: 0;
 }
 
+.box {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  margin: 6rem;
+}
+
 .box a {
   text-decoration: none;
   padding: 0.5rem;
@@ -300,12 +338,6 @@ main {
   color: whitesmoke;
   font-weight: 700;
   font-family: "Raleway", sans-serif;
-}
-
-.box {
-  position: relative;
-  cursor: pointer;
-  margin: 6rem;
 }
 
 .text-container {
