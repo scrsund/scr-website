@@ -373,7 +373,11 @@ main {
   }
 
   .text-container {
-    margin-top: 1rem;
+    margin-top: 4rem;
+    text-align: center;
+  }
+
+  .title {
     text-align: center;
   }
 
