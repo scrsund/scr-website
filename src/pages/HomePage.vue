@@ -92,14 +92,14 @@ export default {
   }
   100% {
     opacity: 1;
-    transform: translate(-1100%, 100%);
+    transform: translate(-1080%, 100%);
   }
 }
 
 @keyframes slideIn2 {
   0% {
     opacity: 1;
-    transform: translate(-1100%, 100%);
+    transform: translate(-1080%, 100%);
   }
   100% {
     opacity: 0;
@@ -114,14 +114,14 @@ export default {
   }
   100% {
     opacity: 1;
-    transform: translate(-1080%, -500%);
+    transform: translate(-1040%, -500%);
   }
 }
 
 @keyframes slideIn3 {
   0% {
     opacity: 1;
-    transform: translate(-1080%, -500%);
+    transform: translate(-1040%, -500%);
   }
   100% {
     opacity: 0;
@@ -136,14 +136,14 @@ export default {
   }
   100% {
     opacity: 1;
-    transform: translate(-600%, -750%);
+    transform: translate(-570%, -750%);
   }
 }
 
 @keyframes slideIn4 {
   0% {
     opacity: 1;
-    transform: translate(-600%, -750%);
+    transform: translate(-570%, -750%);
   }
   100% {
     opacity: 0;
@@ -158,14 +158,14 @@ export default {
   }
   100% {
     opacity: 1;
-    transform: translate(-0%, -620%);
+    transform: translate(-0%, -530%);
   }
 }
 
 @keyframes slideIn5 {
   0% {
     opacity: 1;
-    transform: translate(-0%, -620%);
+    transform: translate(-0%, -530%);
   }
   100% {
     opacity: 0;
@@ -180,14 +180,14 @@ export default {
   }
   100% {
     opacity: 1;
-    transform: translate(80%, -30%);
+    transform: translate(70%, 60%);
   }
 }
 
 @keyframes slideIn6 {
   0% {
     opacity: 1;
-    transform: translate(80%, -30%);
+    transform: translate(70%, 60%);
   }
   100% {
     opacity: 0;
@@ -202,14 +202,14 @@ export default {
   }
   100% {
     opacity: 1;
-    transform: translate(-200%, 600%);
+    transform: translate(-250%, 610%);
   }
 }
 
 @keyframes slideIn7 {
   0% {
     opacity: 1;
-    transform: translate(-200%, 580%);
+    transform: translate(-250%, 610%);
   }
   100% {
     opacity: 0;
@@ -308,7 +308,7 @@ i {
 }
 
 main {
-  min-height: 60vh;
+  min-height: 74vh;
   padding: 2rem;
 }
 
