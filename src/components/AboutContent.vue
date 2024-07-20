@@ -6,7 +6,6 @@
           <HoverCardTrigger>
             <div class="trigger-content">
               <i v-if="entry.icon" :class="entry.icon"></i>
-              <img v-else :src="meImage" class="me-image" />
               <h1 :class="getTitleClass(index)">{{ entry.title }}</h1>
             </div>
           </HoverCardTrigger>
@@ -34,7 +33,6 @@ import {
   HoverCardTrigger,
 } from "@/components/UI/hover-card";
 import { mapState } from "vuex";
-import meImage from "@/assets/me.jpg";
 
 export default {
   components: {
@@ -43,9 +41,7 @@ export default {
     HoverCardTrigger,
   },
   data() {
-    return {
-      meImage,
-    };
+    return {};
   },
   computed: {
     ...mapState(["entries"]),
@@ -177,11 +173,6 @@ export default {
   font-weight: 200;
 }
 
-.me-image {
-  width: 100px; /* Adjust size as needed */
-  height: auto;
-}
-
 .hover-card-content {
   opacity: 0;
   visibility: hidden;
@@ -190,7 +181,7 @@ export default {
   padding: 1rem;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   position: absolute;
-  bottom: 110px; /* Adjust this value to control vertical positioning */
+  bottom: 110px;
   left: 68%;
   z-index: 1000;
   width: 180px;
@@ -199,12 +190,12 @@ export default {
     opacity 0.5s ease-in-out,
     visibility 0.5s ease-in-out;
   animation: fadeInUp 1.1s forwards;
-  pointer-events: none; /* Prevents interaction when not visible */
+  pointer-events: none;
 }
 
 .grid-item:hover .hover-card-content {
   opacity: 1;
-  pointer-events: auto; /* Enables interaction when visible */
+  pointer-events: auto;
   visibility: visible;
 }
 
@@ -261,4 +252,12 @@ export default {
 .border-none {
   border: none;
 }
+
+/*
+.me-image {
+  width: 100px;
+  height: auto;
+  border-radius: 2rem;
+} 
+*/
 </style>
