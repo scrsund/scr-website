@@ -1,17 +1,57 @@
 <template>
-  <form>
+  <form @submit.prevent="submitForm">
     <div class="form-control">
       <label>Name:</label>
-      <input text="text" />
+      <input v-model="name" type="text" required />
       <label>Email:</label>
-      <input text="email" />
+      <input v-model="email" type="email" required />
       <label>Message:</label>
-      <textarea rows="5"></textarea>
+      <textarea v-model="message" rows="5" required></textarea>
 
-      <button>Submit</button>
+      <button type="submit">Submit</button>
     </div>
   </form>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      name: "",
+      email: "",
+      message: "",
+    };
+  },
+  methods: {
+    async submitForm() {
+      try {
+        const response = await fetch("http://localhost:8080/contact", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name: this.name,
+            email: this.email,
+            message: this.message,
+          }),
+        });
+        const result = await response.json();
+        if (response.ok) {
+          alert(result.message);
+          this.name = "";
+          this.email = "";
+          this.message = "";
+        } else {
+          alert("Error :" + error.message);
+        }
+      } catch (error) {
+        alert("Error :" + error.message);
+      }
+    },
+  },
+};
+</script>
 
 <style scoped>
 .form-control {
