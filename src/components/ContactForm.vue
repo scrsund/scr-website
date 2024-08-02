@@ -20,6 +20,7 @@ export default {
       name: "",
       email: "",
       message: "",
+      error: null,
     };
   },
   methods: {
@@ -51,10 +52,13 @@ export default {
           this.name = "";
           this.email = "";
           this.message = "";
+          this.error = null;
         } else {
+          this.error = result.message;
           alert("Error: " + error.message);
         }
       } catch (error) {
+        this.error = error.message;
         alert("Error :" + error.message);
       }
     },
