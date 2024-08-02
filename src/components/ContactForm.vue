@@ -27,17 +27,20 @@ export default {
   methods: {
     async submitForm() {
       try {
-        const response = await fetch("http://localhost:3000/contact", {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            name: this.name,
-            email: this.email,
-            message: this.message,
-          }),
-        });
+        const response = await fetch(
+          "my-website-eujgjhmg1-scrsunds-projects.vercel.app",
+          {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              name: this.name,
+              email: this.email,
+              message: this.message,
+            }),
+          }
+        );
 
         //DEBUGGING
         // const responseText = await response.text();
