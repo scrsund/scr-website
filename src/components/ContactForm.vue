@@ -10,6 +10,7 @@
 
       <button type="submit">Submit</button>
     </div>
+    <!-- <div v-if="error" class="error">{{ error }}</div> --><!-- Display error message if exists -->
   </form>
 </template>
 
@@ -57,8 +58,8 @@ export default {
           this.error = result.message;
           alert("Error: " + error.message);
         }
-      } catch (error) {
-        this.error = error.message;
+      } catch (err) {
+        this.error = err.message;
         alert("Error :" + error.message);
       }
     },
