@@ -56,11 +56,11 @@ export default {
           this.error = null;
         } else {
           this.error = result.message;
-          alert("Error: " + error.message);
+          alert("Error: " + this.error);
         }
       } catch (err) {
         this.error = err.message;
-        alert("Error :" + error.message);
+        alert("Error :" + this.error);
       }
     },
   },
