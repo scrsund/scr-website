@@ -28,7 +28,7 @@ export default {
     async submitForm() {
       try {
         const response = await fetch(
-          "my-website-eujgjhmg1-scrsunds-projects.vercel.app",
+          "my-website-phhq77onn-scrsunds-projects.vercel.app",
           {
             method: "POST",
             headers: {
@@ -42,14 +42,14 @@ export default {
           }
         );
 
-        //DEBUGGING
-        // const responseText = await response.text();
-        // console.log("Response status:", response.status);
-        // console.log("Response body:", responseText);
+        // DEBUGGING;
+        const responseText = await response.text();
+        console.log("Response status:", response.status);
+        console.log("Response body:", responseText);
 
-        // const result = JSON.parse(responseText);
+        const result = JSON.parse(responseText);
 
-        const result = await response.json();
+        // const result = await response.json();
 
         if (response.ok) {
           alert(result.message);
@@ -59,11 +59,11 @@ export default {
           this.error = null;
         } else {
           this.error = result.message;
-          alert("Error: " + this.error);
+          alert("Response Error: " + this.error);
         }
       } catch (err) {
         this.error = err.message;
-        alert("Error :" + this.error);
+        alert("Catch Error :" + this.error);
       }
     },
   },
