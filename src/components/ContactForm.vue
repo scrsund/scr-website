@@ -25,7 +25,7 @@ export default {
   methods: {
     async submitForm() {
       try {
-        const response = await fetch("http://localhost:8080/contact", {
+        const response = await fetch("http://localhost:3000/contact", {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
@@ -36,14 +36,23 @@ export default {
             message: this.message,
           }),
         });
+
+        //DEBUGGING
+        // const responseText = await response.text();
+        // console.log("Response status:", response.status);
+        // console.log("Response body:", responseText);
+
+        // const result = JSON.parse(responseText);
+
         const result = await response.json();
+
         if (response.ok) {
           alert(result.message);
           this.name = "";
           this.email = "";
           this.message = "";
         } else {
-          alert("Error :" + error.message);
+          alert("Error: " + error.message);
         }
       } catch (error) {
         alert("Error :" + error.message);
