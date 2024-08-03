@@ -134,7 +134,7 @@ section {
 
 @media (max-width: 480px) {
   section {
-    height: 70vh;
+    height: 75vh;
   }
 
   .fade-in-container {
