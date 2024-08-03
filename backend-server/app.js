@@ -5,6 +5,12 @@ var cookieParser = require("cookie-parser");
 var cors = require("cors");
 require("dotenv").config();
 
+console.log("Supabase URL:", process.env.SUPABASE_URL);
+console.log(
+  "Supabase Key:",
+  process.env.SUPABASE_ANON_KEY ? "Key is set" : "Key is missing"
+);
+
 var contactRouter = require("./routes/contact");
 const port = process.env.PORT || 3000;
 

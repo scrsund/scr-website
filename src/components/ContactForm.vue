@@ -24,6 +24,8 @@ export default {
       error: null,
     };
   },
+  // https://my-website-ten-jet-20.vercel.app/contact
+  // http://localhost:3000/contact
   methods: {
     async submitForm() {
       try {
