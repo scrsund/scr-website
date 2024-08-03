@@ -28,7 +28,7 @@ export default {
     async submitForm() {
       try {
         const response = await fetch(
-          "https://my-website-ten-jet-20.vercel.app/contact",
+          "https://my-website-scrsunds-projects.vercel.app/",
           {
             method: "POST",
             headers: {
@@ -43,13 +43,13 @@ export default {
         );
 
         // DEBUGGING;
-        // const responseText = await response.text();
-        // console.log("Response status:", response.status);
-        // console.log("Response body:", responseText);
+        const responseText = await response.text();
+        console.log("Response status:", response.status);
+        console.log("Response body:", responseText);
 
-        // const result = JSON.parse(responseText);
+        const result = JSON.parse(responseText);
 
-        const result = await response.json();
+        // const result = await response.json();
 
         if (response.ok) {
           alert(result.message);
