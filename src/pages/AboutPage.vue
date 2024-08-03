@@ -138,7 +138,7 @@ section {
   }
 
   .fade-in-container {
-    font-size: 23px;
+    font-size: 22px;
   }
 
   .delay-2 {

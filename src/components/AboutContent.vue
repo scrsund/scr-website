@@ -253,11 +253,61 @@ export default {
   border: none;
 }
 
+@media (max-width: 480px) {
+  .section-two {
+    height: 110vh;
+  }
+
+  .grid-container {
+    margin-bottom: 14rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(9, auto);
+    gap: 0px;
+  }
+
+  .grid-item {
+    display: grid;
+    border: 1px solid white;
+  }
+
+  .grid-item:hover .hover-card-content {
+  }
+
+  .hover-title {
+    font-size: 1rem;
+  }
+
+  .trigger-content {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .grid-item i {
+    padding: 0;
+    margin-left: 1rem;
+  }
+
+  .grid-item h1 {
+    margin-right: 1rem;
+  }
+
+  .me-title {
+    display: none;
+  }
+
+  .hover-card-content {
+    width: 20%;
+    bottom: 100px;
+    left: 39%;
+  }
+}
+
 /*
 .me-image {
   width: 100px;
   height: auto;
   border-radius: 2rem;
-} 
+}
 */
 </style>
