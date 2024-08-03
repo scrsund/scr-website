@@ -131,6 +131,16 @@ section {
     opacity: 1;
   }
 }
+
+@media (max-width: 480px) {
+  .fade-in-container {
+    font-size: 20px;
+  }
+
+  .delay-2 {
+    font-size: 30px;
+  }
+}
 </style>
 
 <!-- <template>
