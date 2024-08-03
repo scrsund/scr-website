@@ -6,6 +6,7 @@ const supabaseUrl = process.env.SUPABASE_URL;
 const supabaseKey = process.env.SUPABASE_ANON_KEY;
 const supabase = createClient(supabaseUrl, supabaseKey);
 
+console.log("Trying to post");
 router.post("/", async (req, res, next) => {
   console.log("Request received:", req.body);
   const { name, email, message } = req.body;
