@@ -134,11 +134,11 @@ section {
 
 @media (max-width: 480px) {
   .fade-in-container {
-    font-size: 20px;
+    font-size: 23px;
   }
 
   .delay-2 {
-    font-size: 30px;
+    font-size: 33px;
   }
 }
 </style>
