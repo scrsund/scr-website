@@ -133,6 +133,10 @@ section {
 }
 
 @media (max-width: 480px) {
+  section {
+    height: 70vh;
+  }
+
   .fade-in-container {
     font-size: 23px;
   }
