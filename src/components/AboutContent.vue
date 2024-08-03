@@ -254,8 +254,14 @@ export default {
 }
 
 @media (max-width: 480px) {
+  body,
+  html {
+    overflow-x: hidden;
+  }
+
   .section-two {
-    height: 110vh;
+    height: auto;
+    padding: 1rem;
   }
 
   .grid-container {
@@ -263,17 +269,22 @@ export default {
     grid-template-columns: 1fr;
     grid-template-rows: repeat(9, auto);
     gap: 0px;
+    width: 100vw;
   }
 
   .grid-item {
     display: grid;
     border: 1px solid white;
+    border-left: none;
+    border-right: none;
+    text-align: center;
   }
 
   .grid-item:hover .hover-card-content {
   }
 
-  .hover-title {
+  .hover-title,
+  .me-title {
     font-size: 1rem;
   }
 
@@ -297,9 +308,9 @@ export default {
   }
 
   .hover-card-content {
-    width: 20%;
+    width: 50%;
     bottom: 100px;
-    left: 39%;
+    left: 22%;
   }
 }
 
