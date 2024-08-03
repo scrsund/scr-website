@@ -28,7 +28,7 @@ export default {
     async submitForm() {
       try {
         const response = await fetch(
-          "https://my-website-scrsunds-projects.vercel.app/",
+          "https://my-website-scrsunds-projects.vercel.app/contact",
           {
             method: "POST",
             headers: {
