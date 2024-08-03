@@ -66,4 +66,13 @@
     --gradient-angle: 360deg;
   }
 }
+
+@media (max-width: 480px) {
+  .card {
+    height: 15rem;
+    width: 15rem;
+    border-radius: 3rem;
+    margin-left: 1rem;
+  }
+}
 </style>

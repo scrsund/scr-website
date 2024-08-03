@@ -396,17 +396,26 @@ main {
   }
 
   .text-container {
-    margin-top: 1rem;
     text-align: center;
-    margin: 0;
+    margin-top: 3rem;
   }
 
   .title {
-    text-align: center;
+    font-size: 1.5rem;
+    margin-right: 1rem;
   }
 
   .subtitle {
-    text-align: center;
+    font-size: 1rem;
+    margin-right: 1rem;
+  }
+
+  i {
+    display: none;
+  }
+
+  .box a {
+    font-size: 28px;
   }
 }
 
