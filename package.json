@@ -9,10 +9,12 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^6.5.2",
+    "@supabase/supabase-js": "^2.45.0",
     "axios": "^1.7.3",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "core-js": "^3.8.3",
+    "dotenv": "^16.4.5",
     "lucide-vue-next": "^0.400.0",
     "radix-vue": "^1.8.5",
     "shadcn-vue": "^0.10.5",
