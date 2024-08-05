@@ -86,8 +86,7 @@ export default {
     },
     async submitData() {
       try {
-        const BACKEND_URL =
-          "https://my-website-ten-jet-20.vercel.app/api/contact";
+        const BACKEND_URL = "https://my-website-ten-jet-20.vercel.app/contact";
         // const BACKEND_URL = "http://localhost:3000/contact";
         const formData = {
           name: this.name,
