@@ -1,9 +1,9 @@
-var createError = require("http-errors");
 var express = require("express");
+var cors = require("cors");
 var path = require("path");
 var cookieParser = require("cookie-parser");
-var cors = require("cors");
 require("dotenv").config();
+var createError = require("http-errors");
 
 console.log("Supabase URL:", process.env.SUPABASE_URL);
 console.log(
@@ -11,14 +11,10 @@ console.log(
   process.env.SUPABASE_ANON_KEY ? "Key is set" : "Key is missing"
 );
 
-var contactRouter = require("./api/contact");
-const port = process.env.PORT || 3000;
-
 var app = express();
 
-// view engine setup
-app.set("views", path.join(__dirname, "views"));
-app.set("view engine", "jade");
+var contactRouter = require("./api/contact");
+const port = process.env.PORT || 3000;
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
