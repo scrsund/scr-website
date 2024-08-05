@@ -4,12 +4,14 @@ const { createClient } = require("@supabase/supabase-js");
 
 const supabaseUrl = process.env.SUPABASE_URL;
 const supabaseKey = process.env.SUPABASE_ANON_KEY;
-
 const supabase = createClient(supabaseUrl, supabaseKey);
 
 router.post("/", async (req, res) => {
   console.log("Request received:", req.body);
   const { name, email, message } = req.body.formData;
+  if (!name || !email || !message) {
+    return res.status(400).json({ error: "Missing required fields" });
+  }
   try {
     const { data, error } = await supabase
       .from("contacts")

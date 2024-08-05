@@ -103,10 +103,14 @@ export default {
           }
         );
         this.responseMessage = response.data.message;
-        alert("Form submitted successfully!");
-      } catch (err) {
-        this.error = err.message;
-        console.log("submitData Error: ", this.error);
+        this.errorMessage = "";
+        alert("Submitted form successfully!");
+      } catch (error) {
+        console.error("Error:", error);
+        this.responseMessage = "";
+        this.errorMessage = error.response
+          ? error.response.data.message
+          : "Network Error";
       }
     },
   },
