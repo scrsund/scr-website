@@ -101,6 +101,7 @@ export default {
             headers: { "Content-Type": "application/json" },
           }
         );
+        console.log("Post requested");
         this.responseMessage = response.data.message;
         alert("Form submitted successfully!");
       } catch (err) {
