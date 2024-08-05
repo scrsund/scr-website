@@ -11,7 +11,7 @@ console.log(
   process.env.SUPABASE_ANON_KEY ? "Key is set" : "Key is missing"
 );
 
-var contactRouter = require("./routes/contact");
+var contactRouter = require("./api/contact");
 const port = process.env.PORT || 3000;
 
 var app = express();
@@ -34,7 +34,7 @@ app.use(cors());
 
 // app.use(cors(corsOptions));
 
-app.use("/contact", contactRouter);
+app.use("/api/contact", contactRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
