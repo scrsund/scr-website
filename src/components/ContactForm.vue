@@ -2,6 +2,19 @@
   <form @submit.prevent="submitData">
     <div class="form-control">
       <label>Name:</label>
+      <input v-model="name" type="text" required />
+      <label>Email:</label>
+      <input v-model="email" type="email" required />
+      <label>Message:</label>
+      <textarea v-model="message" rows="5" required></textarea>
+
+      <button type="submit">Submit</button>
+    </div>
+  </form>
+  <!-- <div v-if="error" class="error">{{ error }}</div> --><!-- Display error message if exists -->
+  <!-- <form @submit.prevent="submitData">
+    <div class="form-control">
+      <label>Name:</label>
       <input v-model="formData.name" type="text" required />
       <label>Email:</label>
       <input v-model="formData.email" type="email" required />
@@ -10,8 +23,8 @@
 
       <button type="submit">Submit</button>
     </div>
-    <!-- <div v-if="error" class="error">{{ error }}</div> --><!-- Display error message if exists -->
-  </form>
+    <div v-if="error" class="error">{{ error }}</div> Display error message if exists
+  </form> -->
 </template>
 
 <script>
@@ -20,34 +33,32 @@ import axios from "axios";
 export default {
   data() {
     return {
-      formData: {
-        name: "sarah",
-        email: "scr.sund@gmail.com",
-        message: "test",
-      },
+      name: "sarah",
+      email: "scr.sund@gmail.com",
+      message: "test",
       error: null,
       responseMessage: "",
     };
   },
   // https://my-website-ten-jet-20.vercel.app/contact
   // http://localhost:3000/contact
+
   methods: {
     async submitForm() {
+      // const BACKEND_URL = "https://my-website-ten-jet-20.vercel.app/contact"
+      const BACKEND_URL = "http://localhost:3000/contact";
       try {
-        const response = await fetch(
-          "https://my-website-ten-jet-20.vercel.app/contact",
-          {
-            method: "POST",
-            headers: {
-              "Content-Type": "application/json",
-            },
-            body: JSON.stringify({
-              name: this.name,
-              email: this.email,
-              message: this.message,
-            }),
-          }
-        );
+        const response = await fetch(BACKEND_URL, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name: this.name,
+            email: this.email,
+            message: this.message,
+          }),
+        });
 
         // DEBUGGING;
         const responseText = await response.text();
@@ -75,11 +86,23 @@ export default {
     },
     async submitData() {
       try {
+        const BACKEND_URL = "https://my-website-ten-jet-20.vercel.app/contact";
+        // const BACKEND_URL = "http://localhost:3000/contact";
+        const formData = {
+          name: this.name,
+          email: this.email,
+          message: this.message,
+        };
+        console.log("Submitting : ", formData);
         const response = await axios.post(
-          "https://my-website-ten-jet-20.vercel.app/contact",
-          this.formData
+          BACKEND_URL,
+          { formData },
+          {
+            headers: { "Content-Type": "application/json" },
+          }
         );
         this.responseMessage = response.data.message;
+        alert("Form submitted successfully!");
       } catch (err) {
         this.error = err.message;
         console.log("submitData Error: ", this.error);

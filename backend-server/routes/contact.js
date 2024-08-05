@@ -12,7 +12,7 @@ const supabase = createClient(supabaseUrl, supabaseKey);
 
 router.post("/", async (req, res, next) => {
   console.log("Request received:", req.body);
-  const { name, email, message } = req.body;
+  const { name, email, message } = req.body.formData;
   try {
     const { data, error } = await supabase
       .from("contacts")
