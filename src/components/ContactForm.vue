@@ -97,7 +97,7 @@ export default {
         console.log("Submitting : ", formData);
         const response = await axios.post(
           BACKEND_URL,
-          { formData: this.formData },
+          { formData },
           {
             headers: { "Content-Type": "application/json" },
           }

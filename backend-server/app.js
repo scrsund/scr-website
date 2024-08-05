@@ -13,7 +13,7 @@ console.log(
 
 var app = express();
 
-const contactRouter = require("./backend-server/api/contact");
+const contactRouter = require("./api/contact");
 const port = process.env.PORT || 3000;
 
 app.use(express.json());
@@ -21,16 +21,16 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
-// app.use(cors());
-var corsOptions = {
-  origin: "*",
-  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-  allowedHeaders: ["Content-Type", "Authorization"],
-};
+app.use(cors());
+// var corsOptions = {
+//   origin: "*",
+//   methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+//   allowedHeaders: ["Content-Type", "Authorization"],
+// };
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 
-app.use("/api/contact", contactRouter);
+app.use("/contact", contactRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
