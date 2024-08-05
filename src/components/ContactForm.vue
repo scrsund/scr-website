@@ -2,11 +2,11 @@
   <form @submit.prevent="submitData">
     <div class="form-control">
       <label>Name:</label>
-      <input v-model="name" type="text" required />
+      <input v-model="formData.name" type="text" required />
       <label>Email:</label>
-      <input v-model="email" type="email" required />
+      <input v-model="formData.email" type="email" required />
       <label>Message:</label>
-      <textarea v-model="message" rows="5" required></textarea>
+      <textarea v-model="formData.message" rows="5" required></textarea>
 
       <button type="submit">Submit</button>
     </div>
