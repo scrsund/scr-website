@@ -1,5 +1,5 @@
 <template>
-  <form @submit.prevent="submitForm">
+  <form @submit.prevent="submitData">
     <div class="form-control">
       <label>Name:</label>
       <input v-model="name" type="text" required />
@@ -15,13 +15,18 @@
 </template>
 
 <script>
+import axios from "axios";
+
 export default {
   data() {
     return {
-      name: "sarah",
-      email: "scr.sund@gmail.com",
-      message: "test",
+      formData: {
+        name: "sarah",
+        email: "scr.sund@gmail.com",
+        message: "test",
+      },
       error: null,
+      responseMessage: "",
     };
   },
   // https://my-website-ten-jet-20.vercel.app/contact
@@ -66,6 +71,18 @@ export default {
       } catch (err) {
         this.error = err.message;
         alert("Catch Error :" + this.error);
+      }
+    },
+    async submitData() {
+      try {
+        const response = await axios.post(
+          "https://my-website-ten-jet-20.vercel.app/contact",
+          this.formData
+        );
+        this.responseMessage = response.data.message;
+      } catch (err) {
+        this.error = err.message;
+        console.log("submitData Error: ", this.error);
       }
     },
   },
