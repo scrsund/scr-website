@@ -71,4 +71,8 @@ body {
 .fade-leave-to {
   opacity: 0;
 }
+
+header {
+  background-color: transparent !important;
+}
 </style>
