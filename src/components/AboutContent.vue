@@ -93,7 +93,6 @@ export default {
   justify-content: center;
   align-items: center;
   width: 100%;
-  height: auto;
   box-sizing: border-box;
 }
 
@@ -278,7 +277,7 @@ export default {
   .hover-card-content {
     width: 100px;
     height: 100px;
-    left: -50%;
+    left: -20%;
   }
 
   .hover-card-description {
