@@ -387,6 +387,9 @@ main {
 }
 
 @media (max-width: 480px) {
+  main {
+    overflow-x: hidden;
+  }
   .container {
     display: grid;
   }
