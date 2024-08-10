@@ -36,10 +36,6 @@ export default {
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
 
-main {
-  flex: 1;
-}
-
 html,
 body {
   margin: 0;
@@ -74,16 +70,6 @@ body {
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
-}
-
-header {
-  background-color: transparent !important;
-}
-
-@media (max-width: 480px) {
-  header {
-    background-color: transparent !important;
-  }
 }
 
 /*footer {

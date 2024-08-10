@@ -1,5 +1,5 @@
 <template>
-  <footer class="footer">
+  <footer>
     <a
       href="https://github.com/scrsund"
       target="_blank"
@@ -34,13 +34,17 @@ export default {
 </script>
 
 <style scoped>
-.footer {
+footer {
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 1rem;
   background-color: var(--clr-1);
   transition: 0.3s;
+  /*padding: 1rem;
+  position: fixed;
+  width: 100%;
+  bottom: 0;*/
 }
 
 .footer-icon {
