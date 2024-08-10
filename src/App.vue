@@ -57,7 +57,7 @@ body {
 }
 
 .transition-component {
-  background-color: var(--clr-1);
+  background-color: transparent;
 }
 
 .fade-enter-active {
@@ -70,6 +70,17 @@ body {
 .fade-enter-from,
 .fade-leave-to {
   opacity: 0;
+}
+
+header {
+  background-color: transparent !important;
+  z-index: 1000;
+}
+
+@media (max-width: 480px) {
+  header {
+    background-color: transparent !important;
+  }
 }
 
 /*footer {
