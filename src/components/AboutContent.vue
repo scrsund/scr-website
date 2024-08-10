@@ -242,6 +242,29 @@ export default {
   border: none;
 }
 
+@media (max-width: 480px) {
+  body,
+  html {
+    overflow-x: hidden;
+  }
+
+  .section-two {
+    height: auto;
+    padding: 1rem;
+  }
+
+  .hover-title {
+    font-size: 0.5rem;
+  }
+  .grid-item i {
+    font-size: 0.5rem;
+  }
+
+  .me-title {
+    font-size: 1rem;
+  }
+}
+
 /*@media (max-width: 480px) {
   body,
   html {
