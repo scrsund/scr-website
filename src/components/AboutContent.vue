@@ -242,6 +242,14 @@ export default {
   border: none;
 }
 
+@media (max-width: 768px) {
+  .hover-card-content {
+    width: 100px;
+    height: 100px;
+    left: -50%;
+  }
+}
+
 @media (max-width: 480px) {
   body,
   html {
@@ -251,6 +259,10 @@ export default {
   .section-two {
     height: auto;
     padding: 1rem;
+  }
+
+  .grid-container {
+    gap: 13px;
   }
 
   .grid-title,
