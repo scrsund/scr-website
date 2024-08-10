@@ -178,7 +178,7 @@ export default {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   position: absolute;
   bottom: 110px;
-  left: 65%;
+  left: 58%;
   transform: translateX(-35%);
   z-index: 1000;
   width: 180px;

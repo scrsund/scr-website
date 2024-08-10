@@ -16,7 +16,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
-  background-color: var(--clr-1);
+  background-color: transparent;
 }
 
 .logo {
