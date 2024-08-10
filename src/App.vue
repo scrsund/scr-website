@@ -36,6 +36,10 @@ export default {
 <style>
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap");
 
+main {
+  flex: 1;
+}
+
 html,
 body {
   margin: 0;
@@ -75,4 +79,26 @@ body {
 header {
   background-color: transparent !important;
 }
+
+@media (max-width: 480px) {
+  header {
+    background-color: transparent !important;
+  }
+}
+
+/*footer {
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+@media (max-width: 480px) {
+  header {
+    background-color: transparent;
+  }
+
+  footer {
+  }
+}*/
 </style>
