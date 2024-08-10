@@ -89,8 +89,12 @@ export default {
 .section-two {
   padding: 2rem;
   background-color: var(--clr-5);
-  display: grid;
-  place-content: center;
+  display: flex; /* Use Flexbox */
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  width: 100%;
+  height: 100vh; /* Ensure it takes full viewport height */
+  box-sizing: border-box;
 }
 
 .grid-container {
@@ -98,8 +102,9 @@ export default {
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
   gap: 35px;
-  width: 140vh;
-  height: 80vh;
+  width: 100%;
+  height: auto;
+  padding: 2rem;
 }
 
 .grid-item {
@@ -113,6 +118,7 @@ export default {
   text-align: center;
   position: relative;
   border: 1px solid transparent;
+  min-width: 0;
 }
 
 .trigger-content {
@@ -236,7 +242,7 @@ export default {
   border: none;
 }
 
-@media (max-width: 480px) {
+/*@media (max-width: 480px) {
   body,
   html {
     overflow-x: hidden;
@@ -248,7 +254,6 @@ export default {
   }
 
   .grid-container {
-    margin-bottom: 14rem;
     grid-template-columns: 1fr;
     grid-template-rows: repeat(9, auto);
     gap: 0px;
