@@ -246,7 +246,14 @@ export default {
   .hover-card-content {
     width: 100px;
     height: 100px;
-    left: -50%;
+  }
+
+  .hover-card-description {
+    font-size: 8px;
+  }
+
+  .hover-card-duration {
+    font-size: 6.5px;
   }
 }
 
@@ -275,17 +282,7 @@ export default {
   }
 
   .hover-card-content {
-    width: 100px;
-    height: 100px;
     left: -20%;
-  }
-
-  .hover-card-description {
-    font-size: 8px;
-  }
-
-  .hover-card-duration {
-    font-size: 6.5px;
   }
 }
 
