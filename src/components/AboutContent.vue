@@ -178,9 +178,11 @@ export default {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
   position: absolute;
   bottom: 110px;
-  left: 68%;
+  left: 65%;
+  transform: translateX(-35%);
   z-index: 1000;
   width: 180px;
+  max-width: 90vw;
   color: black;
   transition:
     opacity 0.5s ease-in-out,
@@ -243,8 +245,7 @@ export default {
 
 @media (max-width: 480px) {
   body,
-  html,
-  .grid-container {
+  html {
     overflow-x: hidden;
   }
 
@@ -262,44 +263,18 @@ export default {
     font-size: 1rem;
   }
 
-  /*.hover-card-content {
+  .hover-card-content {
     width: 100px;
     height: 100px;
-  }*/
-}
-
-/*@media (max-width: 480px) {
-
-.hover-card-content {
-  opacity: 0;
-  visibility: hidden;
-  background-color: #fff;
-  border-radius: 5px;
-  padding: 1rem;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-  position: absolute;
-  bottom: 110px;
-  left: 68%;
-  z-index: 1000;
-  width: 180px;
-  color: black;
-  transition:
-    opacity 0.5s ease-in-out,
-    visibility 0.5s ease-in-out;
-  animation: fadeInUp 1.1s forwards;
-  pointer-events: none;
-}
-
-  .trigger-content {
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+    left: -50%;
   }
 
-  .hover-card-content {
-    width: 50%;
-    bottom: 100px;
-    left: 22%;
+  .hover-card-description {
+    font-size: 8px;
+  }
+
+  .hover-card-duration {
+    font-size: 6.5px;
   }
 }
 
