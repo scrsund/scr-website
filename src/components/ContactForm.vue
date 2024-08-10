@@ -33,9 +33,9 @@ import axios from "axios";
 export default {
   data() {
     return {
-      name: "sarah",
-      email: "scr.sund@gmail.com",
-      message: "test",
+      name: "",
+      email: "",
+      message: "",
       error: null,
       responseMessage: "",
     };

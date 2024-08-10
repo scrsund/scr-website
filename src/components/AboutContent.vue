@@ -2,7 +2,7 @@
   <div class="section-two">
     <div class="grid-container">
       <HoverCard v-for="(entry, index) in entries" :key="entry.title">
-        <div class="grid-item" :class="getBorderClass(index)">
+        <div class="grid-item" :class="getBorderClass(entry)">
           <HoverCardTrigger>
             <div class="trigger-content">
               <i v-if="entry.icon" :class="entry.icon"></i>
@@ -47,29 +47,12 @@ export default {
     ...mapState(["entries"]),
   },
   methods: {
-    getBorderClass(index) {
-      switch (index) {
-        case 0:
-          return "border-bottom-right";
-        case 1:
-          return "border-left-right";
-        case 2:
-          return "border-bottom-left";
-        case 3:
-          return "border-top-bottom";
-        case 4:
-          return "border-none";
-        case 5:
-          return "border-top-bottom";
-        case 6:
-          return "border-top-right";
-        case 7:
-          return "border-left-right";
-        case 8:
-          return "border-top-left";
-        default:
-          return "";
+    getBorderClass(entry) {
+      entry.hasCustomBorder = true;
+      if (entry.hasCustomBorder) {
+        return entry.customBorderClass;
       }
+      return "";
     },
     getTitleClass(index) {
       return index === 4 ? "me-title" : "hover-title";
@@ -160,11 +143,11 @@ export default {
   color: #fff;
   cursor: pointer;
   font-size: 15px;
-  transition: font-size 0.5s;
+  transition: transform 0.5s;
 }
 
 .grid-item:hover .hover-title {
-  font-size: 18px;
+  transform: scale(1.2);
 }
 
 .me-title {

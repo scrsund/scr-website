@@ -1,5 +1,5 @@
 <template>
-  <div class="#app">
+  <div>
     <router-view v-slot="{ Component }">
       <TheHeader v-if="showHeader" />
       <transition name="fade" mode="out-in">
@@ -70,15 +70,4 @@ body {
 .fade-leave-to {
   opacity: 0;
 }
-
-/*@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;500;700&display=swap");
-
-html,
-body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  font-family: "Source Code Pro", monospace;
-  background-color: var(--clr-1);
-}*/
 </style>
