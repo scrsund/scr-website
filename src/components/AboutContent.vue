@@ -55,7 +55,7 @@ export default {
       return "";
     },
     getTitleClass(index) {
-      return index === 4 ? "me-title" : "hover-title";
+      return index === 4 ? "me-title" : "grid-title";
     },
   },
 };
@@ -89,11 +89,11 @@ export default {
 .section-two {
   padding: 2rem;
   background-color: var(--clr-5);
-  display: flex; /* Use Flexbox */
-  justify-content: center; /* Center horizontally */
-  align-items: center; /* Center vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  height: 100vh; /* Ensure it takes full viewport height */
+  height: 100vh;
   box-sizing: border-box;
 }
 
@@ -121,28 +121,13 @@ export default {
   min-width: 0;
 }
 
-.trigger-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  transition: transform 0.5s;
-  cursor: pointer;
-}
-
 .grid-item i {
   color: white;
   font-size: 1rem;
-  transition:
-    font-size 0.5s,
-    transform 0.5s;
+  transition: transform 0.5s;
 }
 
-.grid-item:hover i {
-  font-size: 1rem;
-  transform: scale(1.2);
-}
-
-.hover-title {
+.grid-title {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -152,14 +137,36 @@ export default {
   transition: transform 0.5s;
 }
 
-.grid-item:hover .hover-title {
-  transform: scale(1.2);
-}
-
 .me-title {
   font-size: 30px;
   font-family: "Poppins", sans-serif;
   font-weight: 200;
+}
+
+.grid-item:hover i {
+  transform: scale(1.2);
+}
+
+.grid-item:hover .grid-title {
+  transform: scale(1.2);
+}
+
+.grid-item:hover .hover-card-content {
+  opacity: 1;
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.grid-item:not(:hover) .hover-card-content {
+  animation: fadeOutDown 0.6s forwards;
+}
+
+.trigger-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.5s;
+  cursor: pointer;
 }
 
 .hover-card-content {
@@ -182,16 +189,6 @@ export default {
   pointer-events: none;
 }
 
-.grid-item:hover .hover-card-content {
-  opacity: 1;
-  pointer-events: auto;
-  visibility: visible;
-}
-
-.grid-item:not(:hover) .hover-card-content {
-  animation: fadeOutDown 0.6s forwards;
-}
-
 .hover-card-inner {
   display: flex;
   flex-direction: column;
@@ -207,6 +204,8 @@ export default {
   font-size: 10px;
   margin-bottom: 5px;
 }
+
+/*grid-item border classes*/
 
 .border-top-left {
   border-top: 1px solid #fff;
@@ -244,7 +243,8 @@ export default {
 
 @media (max-width: 480px) {
   body,
-  html {
+  html,
+  .grid-container {
     overflow-x: hidden;
   }
 
@@ -253,69 +253,47 @@ export default {
     padding: 1rem;
   }
 
-  .hover-title {
-    font-size: 0.5rem;
-  }
+  .grid-title,
   .grid-item i {
-    font-size: 0.5rem;
+    font-size: 0.6rem;
   }
 
   .me-title {
     font-size: 1rem;
   }
+
+  /*.hover-card-content {
+    width: 100px;
+    height: 100px;
+  }*/
 }
 
 /*@media (max-width: 480px) {
-  body,
-  html {
-    overflow-x: hidden;
-  }
 
-  .section-two {
-    height: auto;
-    padding: 1rem;
-  }
-
-  .grid-container {
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(9, auto);
-    gap: 0px;
-    width: 100vw;
-  }
-
-  .grid-item {
-    display: grid;
-    border: 1px solid white;
-    border-left: none;
-    border-right: none;
-    text-align: center;
-  }
-
-  .grid-item:hover .hover-card-content {
-  }
-
-  .hover-title,
-  .me-title {
-    font-size: 1rem;
-  }
+.hover-card-content {
+  opacity: 0;
+  visibility: hidden;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+  position: absolute;
+  bottom: 110px;
+  left: 68%;
+  z-index: 1000;
+  width: 180px;
+  color: black;
+  transition:
+    opacity 0.5s ease-in-out,
+    visibility 0.5s ease-in-out;
+  animation: fadeInUp 1.1s forwards;
+  pointer-events: none;
+}
 
   .trigger-content {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-  }
-
-  .grid-item i {
-    padding: 0;
-    margin-left: 1rem;
-  }
-
-  .grid-item h1 {
-    margin-right: 1rem;
-  }
-
-  .me-title {
-    display: none;
   }
 
   .hover-card-content {
