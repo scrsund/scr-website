@@ -93,6 +93,7 @@ export default {
   justify-content: center;
   align-items: center;
   width: 100%;
+  height: auto;
   box-sizing: border-box;
 }
 
