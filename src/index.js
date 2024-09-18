@@ -16,7 +16,7 @@ const store = createStore({
           title: "Financial Analyst",
           icon: "fa-solid fa-coins",
           description:
-            "Trading Forex, Cryptocurrency, and NFTs through market sentiment and technical analysis. I've been able to 20x my portfolio in the last 3 years.",
+            "Trading Forex, Cryptocurrency, and NFTs through market sentiment and technical analysis. I've been able to multiply my portfolio in the last 3 years.",
           duration: "2021 - Present",
           customBorderClass: "border-left-right",
         },
