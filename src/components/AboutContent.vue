@@ -14,9 +14,8 @@
             v-if="entry.title !== 'Me'"
           >
             <div class="hover-card-inner">
-              <h4 class="hover-card-duration">{{ entry.duration }}</h4>
-              <p class="hover-card-description">
-                {{ entry.description }}
+              <h4 class="hover-card-heading" v-html="entry.heading"></h4>
+              <p class="hover-card-description" v-html="entry.description">
               </p>
             </div>
           </HoverCardContent>
@@ -140,6 +139,7 @@ export default {
   font-size: 30px;
   font-family: "Poppins", sans-serif;
   font-weight: 200;
+  cursor: default;
 }
 
 .grid-item:hover i {
@@ -201,8 +201,8 @@ export default {
   margin-bottom: 10px;
 }
 
-.hover-card-duration {
-  font-size: 10px;
+.hover-card-heading {
+  font-size: 12px;
   margin-bottom: 5px;
 }
 
@@ -252,7 +252,7 @@ export default {
     font-size: 8px;
   }
 
-  .hover-card-duration {
+  .hover-card-heading {
     font-size: 6.5px;
   }
 }

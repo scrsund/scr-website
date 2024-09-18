@@ -5,27 +5,24 @@ const store = createStore({
     return {
       entries: [
         {
-          title: "Aspiring Developer",
+          title: "Project 1",
           icon: "fa-solid fa-code",
-          description:
-            "Python, JavaScript/HTML/CSS and postgreSQL. Although I'm open to both front and backend development, I've been enjoying frontend development recently.",
-          duration: "2023 - Present",
+          description: "A recipe management web application using Vue.js. <br><br>• Reusable components<br>• State management<br>• Component communication patterns<br>• Scoped CSS styles",
+          heading: "Recipe App",
           customBorderClass: "border-bottom-right",
         },
         {
-          title: "Financial Analyst",
-          icon: "fa-solid fa-coins",
-          description:
-            "Trading Forex, Cryptocurrency, and NFTs through market sentiment and technical analysis. I've been able to multiply my portfolio in the last 3 years.",
-          duration: "2021 - Present",
+          title: "Project 2",
+          icon: "fa-solid fa-code",
+          description: "An interactive game using Python's Turtle graphics module. <br><br>• Object-Oriented Programming<br>• Real-time event handling<br>• Game loop management<br>• Modular code design",
+          heading: "Turtle Cross",
           customBorderClass: "border-left-right",
         },
         {
-          title: "Musician",
-          icon: "fa-solid fa-music",
-          description:
-            "Playing the drums, guitar, piano, bass, and writing songs. I've played for crowds of thousands and have experience as a studio musician.",
-          duration: "2008 - 2019",
+          title: "Project 3",
+          icon: "fa-solid fa-code",
+          description: "",
+          heading: "Trading Journal<br><i>(coming soon)</i>",
           customBorderClass: "border-bottom-left",
         },
         {
@@ -33,7 +30,7 @@ const store = createStore({
           icon: "fa-solid fa-graduation-cap",
           description:
             "I taught myself how to do music, how to understand financial markets, and now, how to code. Learning new skills and challenging myself is my hobby.",
-          duration: "2007 - Present",
+          heading: "2007 - Present",
           customBorderClass: "border-top-bottom",
         },
         {
@@ -47,31 +44,31 @@ const store = createStore({
           icon: "fa-solid fa-trophy",
           description:
             "Led as a music instructor, youth leader, and preschool assistant. I've worked with people of all ages-- from 2 years to 60 years old.",
-          duration: "2016 - 2022",
+          heading: "2016 - 2022",
           customBorderClass: "border-top-bottom",
         },
         {
-          title: "Growth",
-          icon: "fa-solid fa-person-running",
+          title: "Aspiring Developer",
+          icon: "fa-solid fa-code",
           description:
-            "I believe that your mind is your greatest asset. I always want to improve and better myself mentally and emotionally by reading books and being open to critique.",
-          duration: "On-Going",
+            "Python, JavaScript/HTML/CSS and postgreSQL. Although I'm open to both front and backend development, I've been enjoying frontend development recently.",
+          heading: "2023 - Present",
           customBorderClass: "border-top-right",
         },
         {
-          title: "Team Player",
-          icon: "fa-solid fa-people-group",
+          title: "Financial Analyst",
+          icon: "fa-solid fa-coins",
           description:
-            "I have a genuine interest in people and find that I can work well with almost anyone. My optimistic personality makes it easy to collaborate with others and their ideas.",
-          duration: "On-Going",
+            "Trading Forex, Cryptocurrency, and NFTs through market sentiment and technical analysis. I've been able to multiply my portfolio in the last 3 years.",
+          heading: "2021 - Present",
           customBorderClass: "border-left-right",
         },
         {
-          title: "Serving",
-          icon: "fa-solid fa-handshake-angle",
+          title: "Musician",
+          icon: "fa-solid fa-music",
           description:
-            "Helping others and being generous when I can be. I've been volunteering my time at various organizations my whole life.",
-          duration: "On-Going",
+            "Playing the drums, guitar, piano, bass, and writing songs. I've played for crowds of thousands and have experience as a studio musician.",
+          heading: "2008 - 2019",
           customBorderClass: "border-top-left",
         },
       ],
@@ -90,6 +87,30 @@ const store = createStore({
       //   "fa-solid fa-dog",
       //   "fa-solid fa-gamepad",
       // ],
+      // {
+      //   title: "Growth",
+      //   icon: "fa-solid fa-person-running",
+      //   description:
+      //     "I believe that your mind is your greatest asset. I always want to improve and better myself mentally and emotionally by reading books and being open to critique.",
+      //   heading: "On-Going",
+      //   customBorderClass: "border-top-right",
+      // },
+      // {
+      //   title: "Team Player",
+      //   icon: "fa-solid fa-people-group",
+      //   description:
+      //     "I have a genuine interest in people and find that I can work well with almost anyone. My optimistic personality makes it easy to collaborate with others and their ideas.",
+      //   heading: "On-Going",
+      //   customBorderClass: "border-left-right",
+      // },
+      // {
+      //   title: "Serving",
+      //   icon: "fa-solid fa-handshake-angle",
+      //   description:
+      //     "Helping others and being generous when I can be. I've been volunteering my time at various organizations my whole life.",
+      //   heading: "On-Going",
+      //   customBorderClass: "border-top-left",
+      // },
     };
   },
 });
