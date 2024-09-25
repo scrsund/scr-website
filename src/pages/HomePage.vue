@@ -5,7 +5,7 @@
         <hover-card>
           <hover-card-trigger>
             <home-card>
-              <router-link to="/about">Hi, I'm Sarah.</router-link>
+              <router-link to="/about">Hi, I'm Sarah 👋</router-link>
             </home-card>
           </hover-card-trigger>
           <hover-card-content>
@@ -28,7 +28,7 @@
         </hover-card>
       </div>
       <div class="text-container">
-        <h1 class="title">Aspiring Web Developer</h1>
+        <h1 class="title">Frontend Web Developer</h1>
         <h2 class="subtitle">Vue.js · postgreSQL · Python</h2>
       </div>
     </div>
