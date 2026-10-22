@@ -17,7 +17,6 @@
     "dotenv": "^16.4.5",
     "lucide-vue-next": "^0.400.0",
     "radix-vue": "^1.8.5",
-    "shadcn-vue": "^0.10.5",
     "tailwind-merge": "^2.3.0",
     "tailwindcss-animate": "^1.0.7",
     "vue": "^3.2.13",
